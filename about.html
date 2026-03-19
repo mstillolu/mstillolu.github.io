@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mstillolu | Hakkımda</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <svg class="kirpi-svg" viewBox="0 0 16 16" width="24" height="24" shape-rendering="crispEdges">
+                    <path
+                        d="M5 4h6v1H5zM3 5h10v1H3zM2 6h12v1H2zM1 7h14v1H1zM0 8h15v1H0zM0 9h14v1H0zM1 10h12v1H1zM2 11h3v1H2zM8 11h3v1H8z" />
+                    <rect fill="#0A0A0A" x="2" y="8" width="1" height="1" />
+                </svg>
+                <span id="cyber-logo" data-value="mstillolu">mstillolu</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+                style="border-color: var(--highlight-color);">
+                <span class="navbar-toggler-icon"
+                    style="filter: invert(1) sepia(1) saturate(5) hue-rotate(100deg);"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="about.html">Hakkımda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projeler</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container py-5 mt-4 flex-grow-1">
+        <header class="mb-5 text-center">
+            <h1 class="display-5 terminal-cursor glow-text">> whoami</h1>
+        </header>
+
+        <section id="about" class="pixel-section mb-5">
+            <h2 class="terminal-cursor mb-4">> ./info.exe</h2>
+            <div id="about-container"></div>
+            
+            <h2 class="terminal-cursor mb-4 mt-5 pt-3">> tree ./profile</h2>
+            <ul class="cyber-skill-tree" id="cyber-tree-root"></ul>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div id="footer-contact" class="mb-4"></div>
+            <p class="mb-0" style="opacity:0.7;">&copy; 2026 mstillolu - BAĞLANTI KORUNUYOR.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

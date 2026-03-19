@@ -1,0 +1,49 @@
+{
+    "about": "Sürekli öğrenmeyi odak noktasına koyan ve keşfetmekten keyif alan biriyim. Özellikle oyun ve mobil uygulama geliştirmeyi çok seviyorum. Ancak merakım sadece bunlarla sınırlı değil; donanım, görüntü işleme ve yapay zeka (AI ajanları/Vibe Coding) gibi farklı alanlara da el atıyor, deneysel projeler üretiyorum. Benim için teknoloji ezberlenecek dillerden ziyade, sağlam sistemler tasarlamak ve problemlere yaratıcı çözümler bulmak için harika bir oyun alanı.",
+    "skills": [
+        "C#",
+        "C++",
+        "Kotlin",
+        "Flutter",
+        "Python",
+        "Unity",
+        "Android Studio",
+        "Git/GitHub",
+        "AI Agent Sistemleri",
+        "İngilizce"
+    ],
+    "education": "Sakarya Uygulamalı Bilimler Üniversitesi - Bilgisayar Mühendisliği",
+    "experience": [
+        {
+            "title": "Stajyer",
+            "company": "Fuzzy Mobile Games",
+            "description": "Unity (C#) ile mobil oyun projelerinde; mekanik geliştirme, performans optimizasyonu ve hata ayıklama süreçlerinde aktif rol aldım."
+        }
+    ],
+    "projects": [
+        {
+            "title": "Kalpazan - Android Uygulaması",
+            "url": "https://play.google.com/store/apps/details?id=com.maikodev.kalpazan&pcampaignid=web_share",
+            "tags": [
+                "Kotlin",
+                "Android Studio",
+                "Google Play"
+            ],
+            "description": "Kotlin kullanılarak geliştirilen mobil uygulama. Google Play Store üzerinden yayınlanmıştır. Uygulamanın geliştirme, test ve yayınlama süreçleri bireysel olarak yürütülmüştür."
+        },
+        {
+            "title": "Oyun Prototipleri",
+            "tags": [
+                "C#",
+                "Unity",
+                "Optimizasyon"
+            ],
+            "description": "Unity oyun motoru kullanarak farklı oyun mekanikleri üzerine geliştirilen prototipler. Oyun mekaniği tasarımı, gameplay denemeleri ve performans optimizasyonu süreçleri yürütülmüştür."
+        }
+    ],
+    "contact": {
+        "email": "mtillolu2005@gmail.com",
+        "github": "https://github.com/mstillolu",
+        "linkedin": "https://www.linkedin.com/in/muhammed-s%C4%B1rr%C4%B1-tillolu-592651317/"
+    }
+}

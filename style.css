@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400&family=Press+Start+2P&display=swap');
+/* Fontlar her sayfanın <head> kısmında <link> ile yükleniyor */
 
 :root {
   --bg-color: #0B0C10;
@@ -83,7 +83,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Pixelify Sans', 'IBM Plex Mono', monospace;
   color: var(--highlight-color);
   text-shadow: 2px 2px var(--contrast-color);
   line-height: 1.5;
@@ -92,15 +92,15 @@ h6 {
 }
 
 h1 {
-  font-size: 1.8rem;
+  font-size: 2.4rem;
 }
 
 h2 {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
 }
 
 h3 {
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 
 p,
@@ -160,8 +160,8 @@ li {
 .navbar {
   background-color: var(--bg-color) !important;
   border-bottom: 4px dashed var(--highlight-color);
-  font-family: 'Press Start 2P', cursive;
-  font-size: 0.7rem;
+  font-family: 'Pixelify Sans', 'IBM Plex Mono', monospace;
+  font-size: 1.05rem;
   z-index: 9990;
 }
 
@@ -170,7 +170,15 @@ li {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 1rem;
+  font-size: 1.3rem;
+}
+
+.navbar-toggler {
+  border-color: var(--highlight-color);
+}
+
+.navbar-toggler-icon {
+  filter: invert(1) sepia(1) saturate(5) hue-rotate(100deg);
 }
 
 #cyber-logo {
@@ -289,8 +297,8 @@ li {
 }
 
 .root-box {
-  font-family: 'Press Start 2P', cursive;
-  font-size: 0.8rem;
+  font-family: 'Pixelify Sans', 'IBM Plex Mono', monospace;
+  font-size: 1.05rem;
   padding: 1rem 1.5rem;
   border: 2px solid var(--highlight-color);
   background-color: var(--contrast-color);
@@ -299,8 +307,8 @@ li {
 }
 
 .cat-box {
-  font-family: 'Press Start 2P', cursive;
-  font-size: 0.7rem;
+  font-family: 'Pixelify Sans', 'IBM Plex Mono', monospace;
+  font-size: 0.95rem;
   color: #00FFFF;
   border-color: #00FFFF;
   box-shadow: 2px 2px 0px var(--contrast-color);
@@ -367,11 +375,16 @@ li {
   border-radius: 0;
   box-shadow: 4px 4px 0px var(--contrast-color);
   transition: all 0.2s ease-in-out;
-  cursor: pointer;
   z-index: 10;
 }
 
-.card:hover {
+/* Sadece linki olan kartlar tıklanabilir görünür */
+.project-card-link .card {
+  cursor: pointer;
+}
+
+.project-card-link:hover .card,
+.project-card-link:focus-visible .card {
   transform: translateY(-5px);
   box-shadow: 0 0 25px var(--highlight-color), 8px 8px 0px var(--contrast-color);
   background-color: rgba(0, 255, 136, 0.1);
@@ -381,7 +394,7 @@ li {
 .card-title {
   color: #fff;
   text-shadow: 2px 2px var(--main-color);
-  font-size: 1rem;
+  font-size: 1.4rem;
 }
 
 .card-text {
@@ -425,7 +438,7 @@ a.custom-link:hover {
   border: 4px solid var(--highlight-color);
   box-shadow: 0 0 30px rgba(0, 255, 136, 0.4), 8px 8px 0px var(--contrast-color);
   overflow: hidden;
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Pixelify Sans', 'IBM Plex Mono', monospace;
   user-select: none;
   border-radius: 4px;
 }
@@ -508,6 +521,12 @@ a.custom-link:hover {
 /* Hologram Floating Kirpi (Index Page) */
 .holo-kirpi {
   animation: floatKirpi 4s ease-in-out infinite;
+  cursor: pointer;
+}
+
+.holo-kirpi:focus-visible {
+  outline: 2px dashed var(--highlight-color);
+  outline-offset: 8px;
 }
 
 @keyframes floatKirpi {
@@ -545,7 +564,331 @@ footer {
   background-color: rgba(10, 10, 10, 0.9);
   padding: 2rem 0;
   text-align: center;
-  font-family: 'Press Start 2P', cursive;
-  font-size: 0.7rem;
+  font-family: 'Pixelify Sans', 'IBM Plex Mono', monospace;
+  font-size: 0.95rem;
   margin-top: auto;
+}
+/* =========================================================
+   Başlık fontu: Pixelify Sans (Türkçe harfleri destekler)
+   ========================================================= */
+h1, h2, h3, h4, h5, h6,
+.navbar, .root-box, .cat-box, footer {
+  font-weight: 500;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* =========================================================
+   Dil düğmesi (TR / EN)
+   ========================================================= */
+.lang-toggle {
+  margin-left: auto;
+  margin-right: 0.75rem;
+  background: transparent;
+  border: 2px solid var(--highlight-color);
+  color: var(--highlight-color);
+  font-family: 'Pixelify Sans', 'IBM Plex Mono', monospace;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.2rem 0.6rem;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 var(--contrast-color);
+  transition: all 0.2s;
+}
+
+.lang-toggle span {
+  opacity: 0.45;
+}
+
+.lang-toggle .lang-sep {
+  margin: 0 0.3rem;
+}
+
+.lang-toggle span.active {
+  opacity: 1;
+  text-shadow: 0 0 8px var(--highlight-color);
+}
+
+.lang-toggle:hover,
+.lang-toggle:focus-visible {
+  background-color: rgba(0, 255, 136, 0.12);
+  outline: none;
+}
+
+@media (min-width: 992px) {
+  .lang-toggle {
+    order: 3;
+    margin-left: 1rem;
+    margin-right: 0;
+  }
+}
+
+/* =========================================================
+   Ana sayfa: oyun açılış menüsü
+   ========================================================= */
+.home {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+.welcome-text {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-transform: none;
+  text-shadow: 0 0 10px var(--highlight-color);
+  min-height: 2.4rem;
+  margin: 0 0 2rem;
+}
+
+.start-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.start-menu li {
+  color: inherit;
+}
+
+.menu-item {
+  position: relative;
+  display: inline-block;
+  font-family: 'Pixelify Sans', 'IBM Plex Mono', monospace;
+  font-weight: 500;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--highlight-color);
+  opacity: 0.55;
+  text-decoration: none;
+  padding: 0.15rem 1rem 0.15rem 2.4rem;
+  text-shadow: 2px 2px var(--contrast-color);
+  transition: opacity 0.15s, transform 0.15s;
+}
+
+.menu-item::before {
+  content: '▶';
+  position: absolute;
+  left: 0.4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.8em;
+  opacity: 0;
+}
+
+.menu-item.selected,
+.menu-item:focus-visible {
+  opacity: 1;
+  color: var(--highlight-color);
+  text-shadow: 0 0 12px var(--highlight-color), 2px 2px var(--contrast-color);
+  transform: translateX(4px);
+  outline: none;
+}
+
+.menu-item.selected::before,
+.menu-item:focus-visible::before {
+  opacity: 1;
+  animation: blink 1s step-end infinite;
+}
+
+.menu-hint {
+  margin: 1.5rem 0 0;
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+/* Dokunmatik ekranlarda klavye ipucu gereksiz */
+@media (hover: none) {
+  .menu-hint {
+    display: none;
+  }
+}
+
+/* İletişim seçilince footer kısa bir süre parlar */
+footer.flash {
+  animation: footerFlash 1.2s ease-out;
+}
+
+@keyframes footerFlash {
+  0%, 30% {
+    box-shadow: inset 0 0 40px rgba(0, 255, 136, 0.45);
+    border-top-color: #fff;
+  }
+
+  100% {
+    box-shadow: none;
+  }
+}
+
+/* =========================================================
+   Hakkımda: kilidi açılan eşyalar
+   ========================================================= */
+.unlock-intro {
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+}
+
+.unlock-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.unlock-item {
+  --item-color: var(--highlight-color);
+  position: relative;
+  background-color: rgba(10, 10, 10, 0.85);
+  border: 2px solid var(--item-color);
+  box-shadow: 3px 3px 0 var(--contrast-color);
+  padding: 0.9rem 1rem;
+  color: var(--item-color);
+  animation: unlockIn 0.4s ease-out both;
+  animation-delay: var(--delay, 0ms);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.unlock-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 16px var(--item-color), 3px 3px 0 var(--contrast-color);
+}
+
+.unlock-item.type-language { --item-color: #00FF88; }
+.unlock-item.type-engine   { --item-color: #00E5FF; }
+.unlock-item.type-tool     { --item-color: #FFD23F; }
+.unlock-item.type-field    { --item-color: #FF6AD5; }
+.unlock-item.type-spoken   { --item-color: #B49CFF; }
+
+.unlock-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+.unlock-icon {
+  font-family: 'Pixelify Sans', 'IBM Plex Mono', monospace;
+  font-weight: 500;
+  font-size: 1.1rem;
+  min-width: 2rem;
+  text-align: center;
+  border: 1px dashed var(--item-color);
+  padding: 0 0.3rem;
+}
+
+.unlock-badge {
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  opacity: 0.75;
+}
+
+.unlock-name {
+  font-family: 'Pixelify Sans', 'IBM Plex Mono', monospace;
+  font-weight: 500;
+  font-size: 1.35rem;
+  line-height: 1.2;
+  color: #fff;
+  text-shadow: 2px 2px var(--contrast-color);
+}
+
+.unlock-type {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  margin-top: 0.2rem;
+}
+
+.unlock-used {
+  font-size: 0.8rem;
+  margin-top: 0.6rem;
+  padding-top: 0.5rem;
+  border-top: 1px dashed var(--item-color);
+  color: #cfd8d3;
+}
+
+.unlock-used span {
+  color: var(--item-color);
+}
+
+@keyframes unlockIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* =========================================================
+   Ağaç: açıklama metni ve mobil düzen
+   ========================================================= */
+.tree-node-box {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.tree-node-text {
+  border: none;
+  box-shadow: none;
+  padding: 0.5rem 0;
+  opacity: 0.85;
+  background: transparent;
+}
+
+@media (max-width: 575.98px) {
+  .pixel-section {
+    padding: 1.5rem 1rem;
+    border-width: 3px;
+  }
+
+  .cyber-skill-tree ul {
+    margin-left: 0.6rem;
+  }
+
+  .cyber-skill-tree li {
+    padding-left: 1.1rem;
+  }
+
+  .cyber-skill-tree li::before {
+    width: 0.8rem;
+  }
+
+  /* En derin seviye (deneyim açıklaması) için girintiyi azalt */
+  .cyber-skill-tree ul ul ul {
+    margin-left: 0.2rem;
+  }
+
+  .tree-node-box {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .menu-item {
+    font-size: 1.5rem;
+  }
+
+  .welcome-text {
+    font-size: 1.2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .unlock-item {
+    animation: none;
+  }
 }
